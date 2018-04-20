@@ -1,0 +1,157 @@
+li{
+    color: black;
+}
+ul {
+  list-style-position: inside;
+  list-style: none;
+}
+
+.no-users {
+  padding-top: 10px;
+}
+
+.users {
+  float: left;
+  height: 100vh;
+  background: #54b1d2;
+  width: 320px;
+}
+
+.users li {
+  padding: 10px;
+  border-bottom: 1px solid black;
+  overflow: hidden;
+  text-align: left;
+  color: white;
+  position: relative;
+  cursor: pointer;
+}
+
+.users .selected {
+  background: #2f9ac0;
+}
+
+.users .username-letter {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: white;
+  font-size: 25px;
+  text-transform: uppercase;
+  float: left;
+  line-height: 48px;
+  color: #392424;
+  text-align: center;
+}
+
+.users .new-messages {
+  position: absolute;
+  right: 13px;
+  top: 15px;
+  width: 15px;
+  height: 15px;
+  background: #036f96;
+  font-size: 11px;
+  text-align: center;
+  border-radius: 50%;
+  line-height: 13px;
+}
+
+.users .name {
+  text-transform: capitalize;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.users section {
+  padding-left: 10px;
+  overflow: hidden;
+  line-height: 25px;
+}
+
+.users .last-message {
+  color: #aedae9;
+  font-size: 13px;
+  color: #aedae9;
+  font-size: 13px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.global-messages {
+  float: right;
+}
+input.btn-group{
+  background-image: url(/userlogo.png);
+  background-color: transparent; /* make the button transparent */
+  background-repeat: no-repeat;  /* make the background image appear only once */
+  background-position: 0px 0px;  /* equivalent to 'top left' */
+  border: none;           /* assuming we don't want any borders */
+  cursor: pointer;        /* make the cursor like hovering over an <a> element */
+  height: 16px;           /* make this the size of your image */
+  padding-left: 16px;     /* make text start to the right of the image */
+  vertical-align: middle;
+}
+.btn-group button {
+  background-color: #F8F8FF; /* Green background */
+  border: 1px solid dodgerblue; /* Green border */
+  color: dodgerblue; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  width: 50%; /* Set a width if needed */
+  display: block; /* Make the buttons appear below each other */
+  height:50px;
+  text-align:right;
+}
+
+.btn-group button:not(:last-child) {
+  border-bottom: none; /* Prevent double borders */
+
+}
+.btn-group button:focus{
+  background:olive;
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #3e8e41;
+}
+#chatwindow{
+  position:relative;
+  height:400px; /* if you wish to use all of your space, use
+    position:absolute; top:0;left:0;right:0;bottom:0;
+    or drop the chatdwindow div */
+}
+#messagewindow, #inputcontainer{
+  position:absolute;
+  left:0;
+  right:0;
+  border:1px solid #000;
+}
+#messagewindow{
+  overflow:auto;
+  top:0;
+  bottom:3em;
+}
+#inputcontainer{
+  display:block;
+  bottom:0;
+  height:1em;
+  padding:.5em;
+  margin-top:1em;
+}
+
+#inputcontainer > p{
+  margin:0;
+}
+footer {
+   background-color: red;
+   position: fixed;
+   right: 0;
+   position: fixed;
+   bottom: 0px;
+   right: 0px;
+
+   }

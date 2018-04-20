@@ -1,0 +1,29 @@
+<div>
+  <div>
+    <aside class="users">
+      <h2 class="no-users" *ngIf="!connectedUsers.length">No hay usuarios conectados</h2>
+      <ul>
+        <li *ngFor="let user of connectedUsers" [ngClass]="{'selected': (selectedUser !== undefined) && (selectedUser.id === user.id)}">
+          <div (click) = "onUserClick(user)">
+            <div class="username-letter">{{user.username[0]}}</div>
+            <section class="user-details">
+              <div class="name">{{user.username}}</div>
+              <div class="last-message" *ngIf="hasMessagesFromUser(user)">{{getMessagesByUser(user)[getMessagesByUser(user).length - 1].text}}</div>
+            </section>
+            <span class="new-messages" *ngIf="hasMessagesFromUser(user)">{{getMessagesByUser(user).length}}</span>
+          </div>
+         </li>
+      </ul>
+    </aside>
+  </div>
+  <div *ngIf="!connectedUser">
+    <input [(ngModel)]="userName" >
+    <button (click)="connect()">Conectar</button>
+  </div>
+  <div *ngIf="connectedUser">
+    <input [(ngModel)]="chatMessageToSend.text" placeholder="text">
+    <button *ngIf="selectedUser" (click)="sendMessage(selectedUser)">send</button>
+  </div>
+
+</div>
+
